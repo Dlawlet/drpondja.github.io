@@ -1,34 +1,79 @@
-<!-- ...existing code... -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog Médical – Dr Pondja</title>
-<meta name="description" content="Articles médicaux, prévention et informations santé du Dr Pondja.">
+<title>Blog Médical – Dr Pondja | Conseils Santé & Prévention</title>
+<meta name="description" content="Articles médicaux, conseils de prévention et informations santé du Dr Pondja. Découvrez nos guides pratiques pour votre bien-être.">
+<meta name="keywords" content="blog médical, conseils santé, prévention, Dr Pondja, santé publique, bien-être, médecine générale">
+<meta name="author" content="Dr Pondja">
+<meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://drpondja.fr/blog.html">
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<meta property="og:type" content="article">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
 <meta property="og:title" content="Blog Médical – Dr Pondja">
-<meta property="og:description" content="Articles médicaux, prévention et informations santé.">
+<meta property="og:description" content="Articles médicaux, prévention et informations santé par le Dr Pondja.">
 <meta property="og:url" content="https://drpondja.fr/blog.html">
-<meta property="og:image" content="assets/blog-share.png">
+<meta property="og:image" content="https://drpondja.fr/assets/blog-share.png">
+<meta property="og:locale" content="fr_BE">
 
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog Médical – Dr Pondja">
+<meta name="twitter:description" content="Conseils santé et prévention par le Dr Pondja">
+
+<!-- JSON-LD Blog -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog Médical Dr Pondja",
+  "description": "Conseils santé, prévention et informations médicales",
+  "url": "https://drpondja.fr/blog.html",
+  "author": {
+    "@type": "Person",
+    "name": "Dr Pondja",
+    "jobTitle": "Médecin Généraliste"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Cabinet Dr Pondja"
+  }
+}
+</script>
 </head>
 
 <body>
 
-<header>
-  <div class="container">
-    <nav>
-      <div class="logo"><strong>Dr Pondja</strong></div>
+<header id="header">
+  <div class="container nav-wrap">
+    <div class="brand">
+      <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="#7c3aed"/>
+        <path d="M16 8L20 12H18V20C18 21.1 17.1 22 16 22C14.9 22 14 21.1 14 20V12H12L16 8Z" fill="white"/>
+        <circle cx="16" cy="24" r="1.5" fill="white"/>
+      </svg>
+      <span><strong>Dr Pondja</strong></span>
+    </div>
+
+    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav" aria-label="Ouvrir le menu">
+      <span class="hamburger"></span>
+    </button>
+
+    <nav id="mainNav" class="main-nav" role="navigation">
       <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="index.html#rdv">Rendez-vous</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#cabinets">Cabinets</a></li>
         <li><a href="index.html#apropos">À propos</a></li>
         <li><a href="blog.html" aria-current="page">Blog</a></li>
+        <li><a href="index.html#rdv" class="nav-cta">Rendez-vous</a></li>
       </ul>
     </nav>
   </div>
@@ -36,48 +81,529 @@
 
 <main>
 
-<section class="hero">
-    <h1>Blog Médical</h1>
-    <p>Conseils, prévention, informations santé.</p>
+<!-- HERO SECTION -->
+<section class="hero hero-blog">
+    <div class="container">
+      <div class="hero-badge">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+        </svg>
+        Blog Médical
+      </div>
+      <h1>Conseils Santé & Prévention</h1>
+      <p class="hero-subtitle">Articles, guides pratiques et informations médicales pour prendre soin de votre santé au quotidien.</p>
+    </div>
 </section>
 
-<section>
+<!-- ARTICLES SECTION -->
+<section class="blog-section">
     <div class="container">
-        <h2>Articles récents</h2>
+        <div class="section-header">
+          <h2>Articles Récents</h2>
+          <p>Informations vérifiées et conseils pratiques pour votre bien-être</p>
+        </div>
 
-        <!-- Exemple d'article complet prêt à être dupliqué -->
-        <article class="post">
-            <header>
-              <h3><a href="blog.html#article-test">Comment mieux dormir : 5 conseils pratiques</a></h3>
-              <p class="meta">Par Dr Pondja — 10 avril 2025</p>
-            </header>
-            <p>Le sommeil est essentiel pour la santé. Voici cinq conseils simples et efficaces pour améliorer la qualité de votre sommeil : routine régulière, limiter les écrans avant le coucher, adapter l’environnement, éviter les excitants, et gérer le stress avec des exercices de respiration.</p>
-            <p><a class="read-more" href="#TODO_BLOG">Lire l’article complet</a></p>
-        </article>
+        <div class="blog-grid">
+          
+          <!-- Article 1 -->
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://images.unsplash.com/photo-1540206395-68808572332f?w=600&h=400&fit=crop" alt="Vaccination grippe saisonnière" loading="lazy">
+              <div class="blog-category">Prévention</div>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                </svg>
+                <span>15 novembre 2025</span>
+                <span class="reading-time">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                  </svg>
+                  5 min
+                </span>
+              </div>
+              <h3><a href="#vaccination-grippe">La vaccination contre la grippe : pourquoi et quand se faire vacciner ?</a></h3>
+              <p>La grippe saisonnière touche des millions de personnes chaque année. Découvrez l'importance de la vaccination et les personnes à risque prioritaires.</p>
+              <a href="#vaccination-grippe" class="read-more">
+                Lire l'article
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                </svg>
+              </a>
+            </div>
+          </article>
 
-        <!-- Contenu d'exemple d'article complet (sur la même page) -->
-        <article id="article-test" class="post full">
-          <h3>Comment mieux dormir : 5 conseils pratiques</h3>
-          <p class="meta">Par Dr Pondja — 10 avril 2025</p>
-          <p>Le sommeil joue un rôle clé dans la récupération physique et mentale. Ces conseils sont adaptés à la plupart des adultes et faciles à mettre en place au quotidien :</p>
-          <ol>
-            <li>Établir des horaires réguliers ;</li>
-            <li>Limiter les écrans 1 heure avant le coucher ;</li>
-            <li>Adapter la chambre : obscurité, température 16–19°C, literie confortable ;</li>
-            <li>Éviter caféine et nicotine en fin de journée ;</li>
-            <li>Pratiquer une routine relaxante (respiration, lecture, étirements légers).</li>
-          </ol>
-          <p>Si les troubles persistent, consultez votre médecin pour un bilan personnalisé.</p>
-        </article>
+          <!-- Article 2 -->
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" alt="Sommeil de qualité" loading="lazy">
+              <div class="blog-category">Bien-être</div>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                </svg>
+                <span>10 novembre 2025</span>
+                <span class="reading-time">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                  </svg>
+                  6 min
+                </span>
+              </div>
+              <h3><a href="#sommeil-qualite">Comment améliorer la qualité de votre sommeil : 7 conseils pratiques</a></h3>
+              <p>Un sommeil réparateur est essentiel pour votre santé. Voici nos recommandations pour retrouver des nuits sereines et récupératrices.</p>
+              <a href="#sommeil-qualite" class="read-more">
+                Lire l'article
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                </svg>
+              </a>
+            </div>
+          </article>
 
+          <!-- Article 3 -->
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop" alt="Alimentation équilibrée" loading="lazy">
+              <div class="blog-category">Nutrition</div>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                </svg>
+                <span>28 octobre 2025</span>
+                <span class="reading-time">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                  </svg>
+                  8 min
+                </span>
+              </div>
+              <h3><a href="#alimentation-hiver">Alimentation en hiver : renforcer son système immunitaire naturellement</a></h3>
+              <p>Découvrez les aliments clés et nutriments essentiels pour maintenir vos défenses immunitaires pendant la saison froide.</p>
+              <a href="#alimentation-hiver" class="read-more">
+                Lire l'article
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://images.unsplash.com/photo-1551817958-11e0f7bbea9f?w=600&h=400&fit=crop" alt="Activité physique régulière" loading="lazy">
+              <div class="blog-category">Activité Physique</div>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                </svg>
+                <span>20 octobre 2025</span>
+                <span class="reading-time">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                  </svg>
+                  7 min
+                </span>
+              </div>
+              <h3><a href="#activite-physique">L'activité physique : un médicament naturel pour votre santé</a></h3>
+              <p>Les bienfaits prouvés de l'exercice régulier sur votre santé physique et mentale. Comment intégrer l'activité dans votre routine quotidienne.</p>
+              <a href="#activite-physique" class="read-more">
+                Lire l'article
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=400&fit=crop" alt="Gestion du stress" loading="lazy">
+              <div class="blog-category">Santé Mentale</div>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                </svg>
+                <span>5 octobre 2025</span>
+                <span class="reading-time">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                  </svg>
+                  6 min
+                </span>
+              </div>
+              <h3><a href="#gestion-stress">Gérer le stress au quotidien : techniques et conseils pratiques</a></h3>
+              <p>Le stress chronique affecte votre santé globale. Apprenez des techniques simples et efficaces pour mieux gérer les tensions du quotidien.</p>
+              <a href="#gestion-stress" class="read-more">
+                Lire l'article
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop" alt="Dépistage précoce" loading="lazy">
+              <div class="blog-category">Prévention</div>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                </svg>
+                <span>25 septembre 2025</span>
+                <span class="reading-time">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                  </svg>
+                  5 min
+                </span>
+              </div>
+              <h3><a href="#depistage">Les dépistages recommandés selon votre âge</a></h3>
+              <p>Prévenir plutôt que guérir : découvrez les examens de dépistage recommandés à chaque étape de votre vie pour préserver votre santé.</p>
+              <a href="#depistage" class="read-more">
+                Lire l'article
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- FULL ARTICLES -->
+<section class="full-articles">
+    <div class="container">
+      
+      <!-- Article Complet 1 -->
+      <article id="vaccination-grippe" class="full-article">
+        <div class="article-header">
+          <div class="article-category">Prévention</div>
+          <h2>La vaccination contre la grippe : pourquoi et quand se faire vacciner ?</h2>
+          <div class="article-meta">
+            <span>Par Dr Pondja</span>
+            <span>•</span>
+            <span>15 novembre 2025</span>
+            <span>•</span>
+            <span>5 min de lecture</span>
+          </div>
+        </div>
+        
+        <div class="article-image">
+          <img src="https://images.unsplash.com/photo-1540206395-68808572332f?w=1200&h=600&fit=crop" alt="Vaccination grippe" loading="lazy">
+        </div>
+
+        <div class="article-content">
+          <p class="lead">La grippe saisonnière est une infection virale qui touche des millions de personnes chaque année en Europe. Bien qu'elle soit souvent considérée comme bénigne, elle peut entraîner des complications graves, particulièrement chez les personnes à risque.</p>
+
+          <h3>Pourquoi se faire vacciner ?</h3>
+          <p>La vaccination antigrippale reste la meilleure protection contre la grippe et ses complications. Elle permet de :</p>
+          <ul>
+            <li>Réduire significativement le risque de contracter la grippe</li>
+            <li>Diminuer la gravité des symptômes en cas d'infection</li>
+            <li>Protéger les personnes fragiles de votre entourage</li>
+            <li>Éviter les hospitalisations et complications graves</li>
+            <li>Maintenir votre activité professionnelle et sociale</li>
+          </ul>
+
+          <h3>Qui doit se faire vacciner en priorité ?</h3>
+          <p>La vaccination est particulièrement recommandée pour :</p>
+          <ul>
+            <li>Les personnes de 65 ans et plus</li>
+            <li>Les femmes enceintes</li>
+            <li>Les personnes atteintes de maladies chroniques (diabète, maladies cardiaques ou pulmonaires)</li>
+            <li>Les personnes immunodéprimées</li>
+            <li>Les professionnels de santé</li>
+            <li>L'entourage des nourrissons de moins de 6 mois</li>
+          </ul>
+
+          <h3>Quand se faire vacciner ?</h3>
+          <p>La période idéale pour se faire vacciner s'étend d'octobre à décembre, avant le pic épidémique hivernal. Le vaccin met environ deux semaines à être pleinement efficace.</p>
+
+          <div class="article-callout">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+            <div>
+              <strong>Bon à savoir :</strong>
+              <p>En Belgique, le vaccin contre la grippe est remboursé pour les personnes à risque. Renseignez-vous auprès de votre mutuelle.</p>
+            </div>
+          </div>
+
+          <h3>Effets secondaires possibles</h3>
+          <p>Le vaccin contre la grippe est généralement très bien toléré. Les effets secondaires les plus courants sont :</p>
+          <ul>
+            <li>Une légère douleur au point d'injection</li>
+            <li>De la fatigue passagère</li>
+            <li>Des douleurs musculaires légères</li>
+          </ul>
+          <p>Ces symptômes disparaissent généralement en 24 à 48 heures.</p>
+
+          <h3>Prendre rendez-vous</h3>
+          <p>La vaccination contre la grippe est disponible dans nos deux cabinets. N'hésitez pas à nous contacter pour prendre rendez-vous ou pour toute question concernant la vaccination.</p>
+
+          <div class="article-cta">
+            <a href="index.html#rdv" class="btn primary">Prendre rendez-vous</a>
+            <a href="#" class="btn outline">Retour aux articles</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article Complet 2 -->
+      <article id="sommeil-qualite" class="full-article">
+        <div class="article-header">
+          <div class="article-category">Bien-être</div>
+          <h2>Comment améliorer la qualité de votre sommeil : 7 conseils pratiques</h2>
+          <div class="article-meta">
+            <span>Par Dr Pondja</span>
+            <span>•</span>
+            <span>10 novembre 2025</span>
+            <span>•</span>
+            <span>6 min de lecture</span>
+          </div>
+        </div>
+        
+        <div class="article-image">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop" alt="Sommeil de qualité" loading="lazy">
+        </div>
+
+        <div class="article-content">
+          <p class="lead">Le sommeil joue un rôle crucial dans notre santé physique et mentale. Un sommeil de qualité améliore la concentration, renforce le système immunitaire et contribue à l'équilibre émotionnel. Pourtant, de nombreuses personnes souffrent de troubles du sommeil.</p>
+
+          <h3>1. Établir une routine de sommeil régulière</h3>
+          <p>Se coucher et se lever à heures fixes, même le week-end, aide à réguler votre horloge biologique interne. Votre corps apprendra naturellement à se préparer au sommeil à l'heure habituelle.</p>
+
+          <h3>2. Créer un environnement propice au sommeil</h3>
+          <p>Votre chambre doit être :</p>
+          <ul>
+            <li><strong>Sombre :</strong> Utilisez des rideaux occultants ou un masque de sommeil</li>
+            <li><strong>Calme :</strong> Bouchons d'oreilles si nécessaire, ou bruit blanc</li>
+            <li><strong>Fraîche :</strong> La température idéale se situe entre 16 et 19°C</li>
+            <li><strong>Confortable :</strong> Investissez dans une bonne literie</li>
+          </ul>
+
+          <h3>3. Limiter les écrans avant le coucher</h3>
+          <p>La lumière bleue des écrans (smartphone, tablette, ordinateur) perturbe la production de mélatonine, l'hormone du sommeil. Arrêtez les écrans au moins 1 heure avant le coucher, ou utilisez un filtre de lumière bleue.</p>
+
+          <h3>4. Éviter les excitants en fin de journée</h3>
+          <p>La caféine peut rester dans votre organisme jusqu'à 6 heures. Évitez le café, le thé, les sodas et le chocolat après 16h. L'alcool, bien qu'il puisse faciliter l'endormissement, perturbe la qualité du sommeil.</p>
+
+          <h3>5. Pratiquer une activité physique régulière</h3>
+          <p>L'exercice régulier améliore la qualité du sommeil, mais évitez les activités intenses moins de 3 heures avant le coucher. Une marche relaxante en soirée peut être bénéfique.</p>
+
+          <h3>6. Gérer le stress et l'anxiété</h3>
+          <p>Techniques efficaces pour se détendre avant le coucher :</p>
+          <ul>
+            <li>Exercices de respiration profonde (cohérence cardiaque)</li>
+            <li>Méditation ou pleine conscience</li>
+            <li>Lecture apaisante</li>
+            <li>Bain tiède</li>
+            <li>Étirements doux ou yoga</li>
+          </ul>
+
+          <h3>7. Attention à l'alimentation du soir</h3>
+          <p>Évitez les repas lourds et copieux au moins 2-3 heures avant le coucher. Si vous avez faim, optez pour une collation légère comme une banane, quelques amandes, ou un verre de lait tiède.</p>
+
+          <div class="article-callout warning">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+            <div>
+              <strong>Quand consulter ?</strong>
+              <p>Si malgré ces conseils, vos troubles du sommeil persistent plus de 3 semaines ou affectent significativement votre vie quotidienne, consultez votre médecin. Des solutions existent, comme la thérapie cognitivo-comportementale pour l'insomnie.</p>
+            </div>
+          </div>
+
+          <div class="article-cta">
+            <a href="index.html#rdv" class="btn primary">Prendre rendez-vous</a>
+            <a href="#" class="btn outline">Retour aux articles</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="blog-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Besoin de conseils personnalisés ?</h2>
+        <p>Nos équipes sont à votre disposition pour répondre à toutes vos questions et vous accompagner dans votre démarche de santé.</p>
+        <div class="cta-buttons">
+          <a href="index.html#rdv" class="btn primary">Prendre rendez-vous</a>
+          <a href="index.html#contact" class="btn outline">Nous contacter</a>
+        </div>
+      </div>
     </div>
 </section>
 
 </main>
 
 <footer>
-    <p>© 2025 – Dr Pondja – Tous droits réservés</p>
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="8" fill="#7c3aed"/>
+              <path d="M16 8L20 12H18V20C18 21.1 17.1 22 16 22C14.9 22 14 21.1 14 20V12H12L16 8Z" fill="white"/>
+              <circle cx="16" cy="24" r="1.5" fill="white"/>
+            </svg>
+            <strong>Dr Pondja</strong>
+          </div>
+          <p>Médecin généraliste à Bruxelles, engagé pour votre santé et votre bien-être.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#cabinets">Cabinets</a></li>
+            <li><a href="index.html#apropos">À propos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="https://drpondja-horaires.fr" target="_blank" rel="noopener">Horaires</a></li>
+            <li><a href="https://drpondja-temoignages.fr" target="_blank" rel="noopener">Témoignages</a></li>
+            <li><a href="https://drpondja-faq.fr" target="_blank" rel="noopener">FAQ</a></li>
+            <li><a href="mentions.html">Mentions légales</a></li>
+            <li><a href="privacy.html">Confidentialité</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/>
+              </svg>
+              <a href="tel:+3221234567">+32 2 123 45 67</a>
+            </li>
+            <li>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+              </svg>
+              <a href="mailto:contact@drpondja.fr">contact@drpondja.fr</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Dr Pondja – Tous droits réservés</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
 </footer>
+
+<script>
+// Mobile Navigation Toggle
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+
+navToggle.addEventListener('click', () => {
+  const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+  navToggle.setAttribute('aria-expanded', String(!expanded));
+  mainNav.classList.toggle('open');
+});
+
+// Close mobile menu when clicking on a link
+const navLinks = mainNav.querySelectorAll('a');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      mainNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
+// Sticky header on scroll
+const header = document.getElementById('header');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  
+  if (currentScroll > 100) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+  
+  lastScroll = currentScroll;
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href !== '#') {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        const headerOffset = 80;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  });
+});
+</script>
 
 </body>
 </html>
