@@ -1,3 +1,4 @@
+<!-- ...existing code... -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,7 +7,15 @@
 <title>Blog Médical – Dr Pondja</title>
 <meta name="description" content="Articles médicaux, prévention et informations santé du Dr Pondja.">
 
+<link rel="canonical" href="https://drpondja.fr/blog.html">
 <link rel="stylesheet" href="style.css">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog Médical – Dr Pondja">
+<meta property="og:description" content="Articles médicaux, prévention et informations santé.">
+<meta property="og:url" content="https://drpondja.fr/blog.html">
+<meta property="og:image" content="assets/blog-share.png">
+
 </head>
 
 <body>
@@ -19,7 +28,7 @@
         <li><a href="index.html">Accueil</a></li>
         <li><a href="index.html#rdv">Rendez-vous</a></li>
         <li><a href="index.html#apropos">À propos</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="blog.html" aria-current="page">Blog</a></li>
       </ul>
     </nav>
   </div>
@@ -29,19 +38,38 @@
 
 <section class="hero">
     <h1>Blog Médical</h1>
-    <p>Conseils, prévention, informations santé. (Tu ajouteras tes articles.)</p>
+    <p>Conseils, prévention, informations santé.</p>
 </section>
 
 <section>
     <div class="container">
         <h2>Articles récents</h2>
-        <p>Tu ajouteras ici des blocs d’articles statiques.  
-        Exemple :</p>
 
-        <article>
-            <h3>Exemple d’article</h3>
-            <p>Ceci est un article fictif. Tu pourras le remplacer.</p>
+        <!-- Exemple d'article complet prêt à être dupliqué -->
+        <article class="post">
+            <header>
+              <h3><a href="blog.html#article-test">Comment mieux dormir : 5 conseils pratiques</a></h3>
+              <p class="meta">Par Dr Pondja — 10 avril 2025</p>
+            </header>
+            <p>Le sommeil est essentiel pour la santé. Voici cinq conseils simples et efficaces pour améliorer la qualité de votre sommeil : routine régulière, limiter les écrans avant le coucher, adapter l’environnement, éviter les excitants, et gérer le stress avec des exercices de respiration.</p>
+            <p><a class="read-more" href="#TODO_BLOG">Lire l’article complet</a></p>
         </article>
+
+        <!-- Contenu d'exemple d'article complet (sur la même page) -->
+        <article id="article-test" class="post full">
+          <h3>Comment mieux dormir : 5 conseils pratiques</h3>
+          <p class="meta">Par Dr Pondja — 10 avril 2025</p>
+          <p>Le sommeil joue un rôle clé dans la récupération physique et mentale. Ces conseils sont adaptés à la plupart des adultes et faciles à mettre en place au quotidien :</p>
+          <ol>
+            <li>Établir des horaires réguliers ;</li>
+            <li>Limiter les écrans 1 heure avant le coucher ;</li>
+            <li>Adapter la chambre : obscurité, température 16–19°C, literie confortable ;</li>
+            <li>Éviter caféine et nicotine en fin de journée ;</li>
+            <li>Pratiquer une routine relaxante (respiration, lecture, étirements légers).</li>
+          </ol>
+          <p>Si les troubles persistent, consultez votre médecin pour un bilan personnalisé.</p>
+        </article>
+
     </div>
 </section>
 

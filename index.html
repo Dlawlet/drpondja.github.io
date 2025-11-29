@@ -1,12 +1,22 @@
+<!-- ...existing code... -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr Pondja – Médecin | Consultations & Accompagnement Médical</title>
-<meta name="description" content="Site officiel du Dr Pondja. Consultations médicales, informations patients, prise de rendez-vous, horaires et localisation.">
+<title>Dr Pondja – Médecin Généraliste | Consultations & Accompagnement Médical</title>
+<meta name="description" content="Site officiel du Dr Pondja — consultations médicales, prise de rendez-vous, informations patients, horaires et localisation.">
 
+<link rel="canonical" href="https://drpondja.fr/">
 <link rel="stylesheet" href="style.css">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dr Pondja – Médecin Généraliste">
+<meta property="og:description" content="Consultations médicales, prévention et suivi personnalisé par le Dr Pondja.">
+<meta property="og:url" content="https://drpondja.fr/">
+<meta property="og:image" content="assets/share-image.png">
+<meta name="twitter:card" content="summary_large_image">
 
 <!-- SEO: JSON-LD LocalBusiness -->
 <script type="application/ld+json">
@@ -20,67 +30,99 @@
     "addressLocality": "VILLE",
     "addressCountry": "FR"
   },
-  "url": "https://drpondja.fr"
+  "url": "https://drpondja.fr",
+  "telephone": "+33-0-00-00-00-00",
+  "openingHours": ["Mo-Fr 09:00-12:30","Mo-Fr 14:00-18:00"]
 }
 </script>
 </head>
 
 <body>
-
 <header>
-  <div class="container">
-    <nav>
-      <div class="logo"><strong>Dr Pondja</strong></div>
+  <div class="container nav-wrap">
+    <div class="brand"><strong>Dr Pondja</strong></div>
+
+    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav" aria-label="Ouvrir le menu">
+      <span class="hamburger"></span>
+    </button>
+
+    <nav id="mainNav" class="main-nav" role="navigation">
       <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="#rdv">Rendez-vous</a></li>
+        <li><a href="#rdv">Rendez‑vous</a></li>
         <li><a href="#apropos">À propos</a></li>
         <li><a href="blog.html">Blog</a></li>
       </ul>
     </nav>
+
   </div>
 </header>
 
 <main>
 
-<!-- HERO -->
 <section class="hero">
-    <h1>Médecin Généraliste – Dr Pondja</h1>
-    <p>Consultations, accompagnement médical, prévention et suivi personnalisé.</p>
+    <div class="container hero-inner">
+      <h1>Médecin Généraliste – Dr Pondja</h1>
+      <p>Consultations, accompagnement médical, prévention et suivi personnalisé.</p>
+      <div class="hero-ctas">
+        <a class="btn primary" id="cta-rdv" href="#TODO_RDV">Prendre Rendez‑vous</a>
+        <a class="btn outline" id="cta-contact" href="#TODO_CONTACT">Contact</a>
+      </div>
+    </div>
 </section>
 
-<!-- RENDEZ-VOUS -->
 <section id="rdv">
     <div class="container">
-        <h2>Prendre Rendez-vous</h2>
-        <p>Indique ton processus → plateforme externe, téléphone, Doctolib…  
-        (Texte à ajuster par toi-même.)</p>
+        <h2>Prendre Rendez‑vous</h2>
+        <p>Réservation par plateforme externe, téléphone, ou via Doctolib. (Remplace le lien du bouton par ton lien préféré.)</p>
+        <div class="cards">
+          <div class="card">
+            <h3>Par téléphone</h3>
+            <p>Téléphone : <a href="tel:+33000000000">+33 0 00 00 00 00</a></p>
+          </div>
+          <div class="card">
+            <h3>En ligne</h3>
+            <p><a href="#TODO_RDV">Réserver en ligne</a></p>
+          </div>
+        </div>
     </div>
 </section>
 
-<!-- À PROPOS -->
-<section id="apropos" style="background:#fff;">
+<section id="apropos" class="about">
     <div class="container">
         <h2>À propos</h2>
-        <p>Texte de présentation du Dr Pondja, parcours, diplômes, spécialités…</p>
+        <p>Le Dr Pondja est médecin généraliste, engagé dans la prévention et le suivi des patients. Parcours, diplômes et spécialités à compléter.</p>
     </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" style="background:#f5f5f5;">
+<section id="contact" class="contact">
     <div class="container">
         <h2>Contact</h2>
-        <p>E-mail : contact@drpondja.fr<br>
+        <p>E-mail : <a href="mailto:contact@drpondja.fr">contact@drpondja.fr</a><br>
         Adresse : (à compléter)<br>
-        Horaires : (à compléter)</p>
+        Horaires : Voir horaires ci‑dessus</p>
     </div>
 </section>
 
 </main>
 
 <footer>
-    <p>© 2025 – Dr Pondja – Tous droits réservés</p>
+    <div class="container">
+      <p>© 2025 – Dr Pondja – Tous droits réservés</p>
+      <p class="footer-links"><a href="privacy.html">Politique de confidentialité</a> · <a href="mentions.html">Mentions légales</a></p>
+    </div>
 </footer>
+
+<script>
+/* Petit script pour le menu mobile */
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+navToggle.addEventListener('click', () => {
+  const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+  navToggle.setAttribute('aria-expanded', String(!expanded));
+  mainNav.classList.toggle('open');
+});
+</script>
 
 </body>
 </html>
