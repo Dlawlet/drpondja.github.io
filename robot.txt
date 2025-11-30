@@ -1,0 +1,24 @@
+# Robots.txt pour Dr Pondja - Cabinet Médical
+# Site: https://drpondja.be
+
+User-agent: *
+Allow: /
+
+# Bloquer les fichiers temporaires et backups
+Disallow: /*.backup$
+Disallow: /*-backup.html$
+Disallow: /*.bak$
+Disallow: /*.tmp$
+
+# Bloquer les fichiers de développement
+Disallow: /README.md
+Disallow: /TODO.txt
+Disallow: /*.txt$
+
+# Autoriser spécifiquement le blog et les pages importantes
+Allow: /blog.html
+Allow: /index.html
+Allow: /assets/
+
+# Sitemap (créez-le plus tard)
+#Sitemap: https://drpondja.be/sitemap.xml
