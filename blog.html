@@ -10,450 +10,16 @@
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://drpondja.be/blog.html">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style_blog.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-/* CRITICAL INLINE CSS - Fallback if external CSS fails to load */
-:root {
-  --primary: #7c3aed;
-  --bg-main: #fafafa;
-  --bg-card: #ffffff;
-  --text-primary: #1f2937;
-  --text-secondary: #6b7280;
-  --border: #e5e7eb;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { 
-  margin: 0; 
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
-  line-height: 1.6;
-  background: #fafafa;
-  color: #1f2937;
-}
-.container { 
-  max-width: 1200px; 
-  margin: 0 auto; 
-  padding: 0 20px; 
-  width: 90%;
-}
-header {
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-.nav-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #7c3aed;
-}
-.logo-icon { flex-shrink: 0; }
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-}
-.main-nav a {
-  padding: 10px 16px;
-  color: #6b7280;
-  text-decoration: none;
-  border-radius: 8px;
-}
-.main-nav a:hover {
-  color: #7c3aed;
-  background: rgba(124, 58, 237, 0.05);
-}
-.hero {
-  background: #f5f3ff;
-  padding: 80px 0;
-  text-align: center;
-}
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 20px;
-  background: white;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #7c3aed;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  margin-bottom: 16px;
-}
-.hero h1 {
-  font-size: 2.5rem;
-  color: #7c3aed;
-  margin-bottom: 16px;
-  font-weight: 800;
-}
-.hero-subtitle {
-  font-size: 1.15rem;
-  color: #6b7280;
-  max-width: 700px;
-  margin: 0 auto;
-}
-section {
-  padding: 60px 0;
-}
-.section-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.section-header h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: #1f2937;
-}
-.section-header p {
-  font-size: 1.1rem;
-  color: #6b7280;
-}
-.blog-section {
-  background: white;
-}
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 32px;
-}
-.blog-card {
-  background: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  border: 1px solid #f3f4f6;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s;
-}
-.blog-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-}
-.blog-image {
-  position: relative;
-  height: 220px;
-  overflow: hidden;
-  background: #e5e7eb;
-}
-.blog-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.blog-category {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background: #7c3aed;
-  color: white;
-  padding: 6px 16px;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-.blog-content {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-.blog-meta {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #9ca3af;
-  font-size: 0.85rem;
-  margin-bottom: 12px;
-  flex-wrap: wrap;
-}
-.blog-meta svg {
-  flex-shrink: 0;
-}
-.reading-time {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  margin-left: auto;
-}
-.blog-content h3 {
-  font-size: 1.35rem;
-  color: #1f2937;
-  margin-bottom: 12px;
-  line-height: 1.4;
-  font-weight: 700;
-}
-.blog-content h3 a {
-  color: #1f2937;
-  text-decoration: none;
-}
-.blog-content h3 a:hover {
-  color: #7c3aed;
-}
-.blog-content > p {
-  color: #6b7280;
-  line-height: 1.6;
-  margin-bottom: 16px;
-  flex-grow: 1;
-}
-.read-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: #7c3aed;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-}
-.full-article {
-  background: white;
-  border-radius: 16px;
-  padding: 48px;
-  margin-bottom: 60px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-.article-header {
-  text-align: center;
-  margin-bottom: 32px;
-}
-.article-category {
-  display: inline-block;
-  background: rgba(124, 58, 237, 0.1);
-  color: #7c3aed;
-  padding: 8px 20px;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-.full-article h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 16px;
-  line-height: 1.3;
-  color: #1f2937;
-}
-.article-meta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  color: #9ca3af;
-  font-size: 0.95rem;
-}
-.article-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-.article-content h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 32px 0 16px;
-  color: #1f2937;
-}
-.article-content p {
-  color: #6b7280;
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
-.article-content .lead {
-  font-size: 1.2rem;
-  color: #6b7280;
-  margin-bottom: 32px;
-  font-weight: 500;
-}
-.article-content ul {
-  margin-bottom: 24px;
-  padding-left: 24px;
-}
-.article-content li {
-  color: #6b7280;
-  line-height: 1.7;
-  margin-bottom: 12px;
-}
-.article-callout {
-  background: rgba(124, 58, 237, 0.05);
-  border-left: 4px solid #7c3aed;
-  padding: 24px;
-  border-radius: 8px;
-  margin: 32px 0;
-  display: flex;
-  gap: 16px;
-}
-.article-callout strong {
-  display: block;
-  margin-bottom: 8px;
-  color: #1f2937;
-}
-.blog-cta {
-  background: #7c3aed;
-  color: white;
-  padding: 80px 0;
-  text-align: center;
-}
-.cta-content h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: white;
-}
-.cta-content p {
-  font-size: 1.1rem;
-  margin-bottom: 32px;
-  color: rgba(255,255,255,0.95);
-}
-.cta-buttons {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-footer {
-  background: #1f2937;
-  color: white;
-  padding: 60px 0 30px;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 50px;
-  margin-bottom: 40px;
-}
-.footer-col h4 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: white;
-}
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-}
-.footer-col ul li {
-  margin-bottom: 12px;
-}
-.footer-col ul li a {
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-}
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.25rem;
-  margin-bottom: 16px;
-}
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-.footer-bottom p {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.9rem;
-}
-.footer-social {
-  display: flex;
-  gap: 16px;
-}
-.footer-social a {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  background: #7c3aed;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-}
-.btn.outline {
-  background: transparent;
-  border: 2px solid #7c3aed;
-  color: #7c3aed;
-}
-.btn.primary {
-  background: #7c3aed;
-  color: white;
-}
-.nav-toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-}
-.hamburger {
-  display: block;
-  width: 26px;
-  height: 2px;
-  background: #1f2937;
-  position: relative;
-}
-.hamburger::before,
-.hamburger::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 26px;
-  height: 2px;
-  background: #1f2937;
-}
-.hamburger::before { top: -8px; }
-.hamburger::after { top: 8px; }
-@media (max-width: 768px) {
-  .nav-toggle { display: block; }
-  .main-nav { 
-    position: fixed;
-    top: 80px;
-    left: 0;
-    right: 0;
-    background: white;
-    padding: 20px;
-    display: none;
-  }
-  .main-nav.open { display: block; }
-  .main-nav ul { flex-direction: column; gap: 4px; }
-  .blog-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; gap: 20px; }
-}
-</style>
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Blog Médical – Dr Pondja">
 <meta property="og:description" content="Articles médicaux, prévention et informations santé par le Dr Pondja.">
 <meta property="og:url" content="https://drpondja.be/blog.html">
-<meta property="og:image" content="https://drpondja.be/assets/blog-share.png">
 <meta property="og:locale" content="fr_BE">
 
 <!-- Twitter Card -->
@@ -486,13 +52,8 @@ footer {
 
 <header id="header">
   <div class="container nav-wrap">
-    <div class="brand">
-      <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="32" height="32" rx="8" fill="#7c3aed"/>
-        <path d="M16 8L20 12H18V20C18 21.1 17.1 22 16 22C14.9 22 14 21.1 14 20V12H12L16 8Z" fill="white"/>
-        <circle cx="16" cy="24" r="1.5" fill="white"/>
-      </svg>
-      <span><strong>Dr Pondja</strong></span>
+    <div class="brand" href="/">
+      <span><strong>Dr Yonkeu Pondja</strong></span>
     </div>
 
     <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav" aria-label="Ouvrir le menu">
@@ -505,7 +66,7 @@ footer {
         <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#cabinets">Cabinets</a></li>
         <li><a href="index.html#apropos">À propos</a></li>
-        <li><a href="blog.html" aria-current="page">Blog</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="index.html#rdv" class="nav-cta">Rendez-vous</a></li>
       </ul>
     </nav>
@@ -738,8 +299,60 @@ footer {
 <section class="full-articles">
     <div class="container">
       
+      <!-- Table of Contents Sidebar -->
+      <aside id="articleTOC" class="article-toc">
+        <div class="toc-header">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+          </svg>
+          <h3>Articles</h3>
+        </div>
+        <nav class="toc-nav">
+          <a href="#vaccination-grippe" class="toc-link" data-article="vaccination-grippe">
+            <span class="toc-number">1</span>
+            <span class="toc-title">Vaccination contre la grippe</span>
+          </a>
+          <a href="#sommeil-qualite" class="toc-link" data-article="sommeil-qualite">
+            <span class="toc-number">2</span>
+            <span class="toc-title">Améliorer votre sommeil</span>
+          </a>
+          <a href="#alimentation-hiver" class="toc-link" data-article="alimentation-hiver">
+            <span class="toc-number">3</span>
+            <span class="toc-title">Alimentation en hiver</span>
+          </a>
+          <a href="#activite-physique" class="toc-link" data-article="activite-physique">
+            <span class="toc-number">4</span>
+            <span class="toc-title">L'activité physique</span>
+          </a>
+          <a href="#gestion-stress" class="toc-link" data-article="gestion-stress">
+            <span class="toc-number">5</span>
+            <span class="toc-title">Gérer le stress</span>
+          </a>
+          <a href="#depistage" class="toc-link" data-article="depistage">
+            <span class="toc-number">6</span>
+            <span class="toc-title">Dépistages recommandés</span>
+          </a>
+        </nav>
+        <button id="tocToggle" class="toc-toggle" aria-label="Afficher/Masquer le sommaire">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.5 3a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1h-13zM1 7.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </button>
+      </aside>
+
+      <div class="articles-wrapper">
+      
       <!-- Article Complet 1 -->
       <article id="vaccination-grippe" class="full-article">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="#top">Blog</a>
+          <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+          <span>Vaccination contre la grippe</span>
+        </nav>
+
         <div class="article-header">
           <div class="article-category">Prévention</div>
           <h2>La vaccination contre la grippe : pourquoi et quand se faire vacciner ?</h2>
@@ -808,13 +421,33 @@ footer {
 
           <div class="article-cta">
             <a href="index.html#rdv" class="btn primary">Prendre rendez-vous</a>
-            <a href="#" class="btn outline">Retour aux articles</a>
+            <a href="#top" class="btn outline">Retour aux articles</a>
+          </div>
+
+          <!-- Article Navigation -->
+          <div class="article-navigation">
+            <a href="#sommeil-qualite" class="article-nav-link next">
+              <span class="nav-label">Article suivant</span>
+              <span class="nav-title">Améliorer la qualité de votre sommeil</span>
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+              </svg>
+            </a>
           </div>
         </div>
       </article>
 
       <!-- Article Complet 2 -->
       <article id="sommeil-qualite" class="full-article">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="#top">Blog</a>
+          <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+          <span>Améliorer votre sommeil</span>
+        </nav>
+
         <div class="article-header">
           <div class="article-category">Bien-être</div>
           <h2>Comment améliorer la qualité de votre sommeil : 7 conseils pratiques</h2>
@@ -880,11 +513,696 @@ footer {
 
           <div class="article-cta">
             <a href="index.html#rdv" class="btn primary">Prendre rendez-vous</a>
-            <a href="#" class="btn outline">Retour aux articles</a>
+            <a href="#top" class="btn outline">Retour aux articles</a>
+          </div>
+
+          <!-- Article Navigation -->
+          <div class="article-navigation">
+            <a href="#vaccination-grippe" class="article-nav-link prev">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+              </svg>
+              <span class="nav-label">Article précédent</span>
+              <span class="nav-title">Vaccination contre la grippe</span>
+            </a>
+            <a href="#alimentation-hiver" class="article-nav-link next">
+              <span class="nav-label">Article suivant</span>
+              <span class="nav-title">Alimentation en hiver</span>
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+              </svg>
+            </a>
           </div>
         </div>
       </article>
 
+      <!-- Article Complet 3 -->
+      <article id="alimentation-hiver" class="full-article">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="#top">Blog</a>
+          <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+          <span>Alimentation en hiver</span>
+        </nav>
+
+        <div class="article-header">
+          <div class="article-category">Nutrition</div>
+          <h2>Alimentation en hiver : renforcer son système immunitaire naturellement</h2>
+          <div class="article-meta">
+            <span>Par Dr Pondja</span>
+            <span>•</span>
+            <span>28 octobre 2025</span>
+            <span>•</span>
+            <span>8 min de lecture</span>
+          </div>
+        </div>
+        
+        <div class="article-image">
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&h=600&fit=crop" alt="Alimentation équilibrée" loading="lazy">
+        </div>
+
+        <div class="article-content">
+          <p class="lead">L'hiver est une période où notre système immunitaire est mis à rude épreuve. Le froid, le manque de lumière et les virus saisonniers sollicitent nos défenses naturelles. Une alimentation adaptée peut considérablement renforcer notre immunité.</p>
+
+          <h3>Les nutriments essentiels pour l'immunité</h3>
+          
+          <h4>La vitamine C</h4>
+          <p>Véritable star de l'immunité, la vitamine C stimule la production de globules blancs. On la trouve dans :</p>
+          <ul>
+            <li>Les agrumes (oranges, citrons, pamplemousses)</li>
+            <li>Le kiwi (plus riche en vitamine C que l'orange)</li>
+            <li>Les poivrons rouges</li>
+            <li>Le brocoli et le chou</li>
+            <li>Les fruits rouges congelés</li>
+          </ul>
+
+          <h4>La vitamine D</h4>
+          <p>Essentielle en hiver lorsque le soleil se fait rare. Sources alimentaires :</p>
+          <ul>
+            <li>Poissons gras (saumon, maquereau, sardines)</li>
+            <li>Œufs (le jaune)</li>
+            <li>Champignons exposés au soleil</li>
+            <li>Produits laitiers enrichis</li>
+          </ul>
+          <p>Une supplémentation peut être recommandée : consultez votre médecin.</p>
+
+          <h4>Le zinc</h4>
+          <p>Minéral crucial pour le fonctionnement des cellules immunitaires. Présent dans :</p>
+          <ul>
+            <li>Les huîtres et fruits de mer</li>
+            <li>Les graines de courge</li>
+            <li>Les légumineuses</li>
+            <li>La viande rouge (consommation modérée)</li>
+            <li>Les noix de cajou</li>
+          </ul>
+
+          <h3>Les super-aliments de l'hiver</h3>
+
+          <h4>L'ail et l'oignon</h4>
+          <p>Riches en composés soufrés aux propriétés antimicrobiennes et anti-inflammatoires. Consommez-les crus ou légèrement cuits pour préserver leurs bienfaits.</p>
+
+          <h4>Le gingembre et le curcuma</h4>
+          <p>Puissants anti-inflammatoires naturels. Le curcuma est mieux absorbé avec du poivre noir et des matières grasses. Idéal en infusion ou dans vos plats.</p>
+
+          <h4>Les légumes crucifères</h4>
+          <p>Brocoli, chou-fleur, choux de Bruxelles contiennent des composés qui soutiennent le système immunitaire et favorisent la détoxification.</p>
+
+          <h4>Les probiotiques</h4>
+          <p>70% de notre immunité réside dans l'intestin. Consommez :</p>
+          <ul>
+            <li>Yaourt nature</li>
+            <li>Kéfir</li>
+            <li>Choucroute non pasteurisée</li>
+            <li>Kimchi</li>
+            <li>Miso</li>
+          </ul>
+
+          <h3>Hydratation en hiver</h3>
+          <p>On y pense moins l'hiver, mais l'hydratation reste cruciale. Privilégiez :</p>
+          <ul>
+            <li>Eau à température ambiante ou tiède (1,5 à 2L par jour)</li>
+            <li>Tisanes (thym, échinacée, sureau)</li>
+            <li>Bouillons de légumes maison</li>
+            <li>Infusions de gingembre et citron</li>
+          </ul>
+
+          <h3>Les aliments à privilégier</h3>
+          <p>Composez vos assiettes avec :</p>
+          <ul>
+            <li><strong>Légumes de saison :</strong> courges, carottes, betteraves, poireaux</li>
+            <li><strong>Fruits d'hiver :</strong> pommes, poires, kiwis, agrumes</li>
+            <li><strong>Protéines de qualité :</strong> poissons gras, légumineuses, œufs bio</li>
+            <li><strong>Bonnes graisses :</strong> huile d'olive, avocat, noix, graines</li>
+            <li><strong>Céréales complètes :</strong> quinoa, riz complet, avoine</li>
+          </ul>
+
+          <h3>Ce qu'il faut limiter</h3>
+          <ul>
+            <li>Sucres raffinés (affaiblissent le système immunitaire)</li>
+            <li>Alcool (déshydrate et affaiblit les défenses)</li>
+            <li>Aliments ultra-transformés</li>
+            <li>Excès de sel</li>
+          </ul>
+
+          <div class="article-callout">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+            <div>
+              <strong>Conseil pratique :</strong>
+              <p>Préparez des soupes maison riches en légumes variés. Elles sont faciles à digérer, hydratantes et permettent de concentrer de nombreux nutriments bénéfiques.</p>
+            </div>
+          </div>
+
+          <h3>L'importance du mode de vie</h3>
+          <p>L'alimentation seule ne suffit pas. Pour une immunité optimale, combinez avec :</p>
+          <ul>
+            <li>Un sommeil de qualité (7-8h par nuit)</li>
+            <li>Une activité physique régulière</li>
+            <li>La gestion du stress</li>
+            <li>Une exposition à la lumière naturelle quotidienne</li>
+          </ul>
+
+          <div class="article-cta">
+            <a href="index.html#rdv" class="btn primary">Prendre rendez-vous</a>
+            <a href="#top" class="btn outline">Retour aux articles</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article Complet 4 -->
+      <article id="activite-physique" class="full-article">
+        <div class="article-header">
+          <div class="article-category">Activité Physique</div>
+          <h2>L'activité physique : un médicament naturel pour votre santé</h2>
+          <div class="article-meta">
+            <span>Par Dr Pondja</span>
+            <span>•</span>
+            <span>20 octobre 2025</span>
+            <span>•</span>
+            <span>7 min de lecture</span>
+          </div>
+        </div>
+        
+        <div class="article-image">
+          <img src="https://images.unsplash.com/photo-1551817958-11e0f7bbea9f?w=1200&h=600&fit=crop" alt="Activité physique régulière" loading="lazy">
+        </div>
+
+        <div class="article-content">
+          <p class="lead">L'activité physique régulière est l'une des meilleures prescriptions pour votre santé. Ses bienfaits sont scientifiquement prouvés et touchent tous les aspects de notre bien-être, du corps à l'esprit.</p>
+
+          <h3>Les bienfaits scientifiquement prouvés</h3>
+
+          <h4>Sur la santé cardiovasculaire</h4>
+          <ul>
+            <li>Réduit le risque de maladies cardiaques de 30 à 40%</li>
+            <li>Améliore la circulation sanguine</li>
+            <li>Diminue la tension artérielle</li>
+            <li>Régule le cholestérol</li>
+            <li>Renforce le muscle cardiaque</li>
+          </ul>
+
+          <h4>Sur le métabolisme</h4>
+          <ul>
+            <li>Prévention et gestion du diabète de type 2</li>
+            <li>Régulation de la glycémie</li>
+            <li>Amélioration de la sensibilité à l'insuline</li>
+            <li>Maintien d'un poids santé</li>
+            <li>Boost du métabolisme de base</li>
+          </ul>
+
+          <h4>Sur la santé mentale</h4>
+          <ul>
+            <li>Réduction de l'anxiété et de la dépression</li>
+            <li>Amélioration de l'humeur grâce aux endorphines</li>
+            <li>Meilleure gestion du stress</li>
+            <li>Augmentation de l'estime de soi</li>
+            <li>Amélioration de la qualité du sommeil</li>
+          </ul>
+
+          <h4>Sur le système immunitaire</h4>
+          <ul>
+            <li>Renforcement des défenses naturelles</li>
+            <li>Réduction des inflammations chroniques</li>
+            <li>Meilleure résistance aux infections</li>
+          </ul>
+
+          <h4>Sur le vieillissement</h4>
+          <ul>
+            <li>Préservation de la masse musculaire</li>
+            <li>Maintien de la densité osseuse</li>
+            <li>Prévention de l'ostéoporose</li>
+            <li>Amélioration de l'équilibre et prévention des chutes</li>
+            <li>Maintien des capacités cognitives</li>
+          </ul>
+
+          <h3>Les recommandations officielles</h3>
+          <p>Selon l'OMS, pour les adultes :</p>
+          <ul>
+            <li><strong>Minimum :</strong> 150 minutes d'activité d'intensité modérée par semaine</li>
+            <li><strong>Ou :</strong> 75 minutes d'activité intense par semaine</li>
+            <li><strong>Idéal :</strong> 300 minutes d'activité modérée par semaine</li>
+            <li><strong>Plus :</strong> Renforcement musculaire 2 fois par semaine</li>
+          </ul>
+
+          <h3>Comment intégrer l'activité dans votre quotidien</h3>
+
+          <h4>Pour les débutants</h4>
+          <p>Commencez progressivement :</p>
+          <ul>
+            <li>Marche rapide 10 minutes, 3 fois par jour</li>
+            <li>Prendre les escaliers au lieu de l'ascenseur</li>
+            <li>Descendre un arrêt de bus plus tôt</li>
+            <li>Jardiner, faire le ménage activement</li>
+            <li>Danser chez vous</li>
+          </ul>
+
+          <h4>Activités d'intensité modérée</h4>
+          <ul>
+            <li>Marche rapide (5-6 km/h)</li>
+            <li>Vélo à allure modérée</li>
+            <li>Natation loisir</li>
+            <li>Aquagym</li>
+            <li>Danse</li>
+            <li>Jardinage actif</li>
+          </ul>
+
+          <h4>Activités d'intensité élevée</h4>
+          <ul>
+            <li>Course à pied</li>
+            <li>Vélo rapide ou en montée</li>
+            <li>Natation intensive</li>
+            <li>Sports collectifs (football, basket)</li>
+            <li>Corde à sauter</li>
+            <li>HIIT (entraînement fractionné)</li>
+          </ul>
+
+          <h3>Conseils pour rester motivé</h3>
+
+          <h4>1. Trouvez une activité qui vous plaît</h4>
+          <p>Le meilleur exercice est celui que vous ferez régulièrement. Testez différentes activités jusqu'à trouver celle qui vous convient.</p>
+
+          <h4>2. Fixez-vous des objectifs réalistes</h4>
+          <p>Commencez petit et augmentez progressivement. Célébrez chaque victoire.</p>
+
+          <h4>3. Créez une routine</h4>
+          <p>Planifiez vos séances comme des rendez-vous importants. Le matin est souvent plus facile pour maintenir une régularité.</p>
+
+          <h4>4. Trouvez un partenaire</h4>
+          <p>Exercice en groupe ou avec un ami augmente la motivation et la régularité.</p>
+
+          <h4>5. Variez les activités</h4>
+          <p>Alternez différents types d'exercices pour éviter la monotonie et solliciter différents muscles.</p>
+
+          <h4>6. Écoutez votre corps</h4>
+          <p>Repos et récupération font partie de l'entraînement. Ne forcez pas en cas de douleur.</p>
+
+          <div class="article-callout warning">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+            <div>
+              <strong>Important :</strong>
+              <p>Si vous reprenez une activité physique après une longue période d'inactivité, ou si vous avez des problèmes de santé, consultez votre médecin avant de commencer un programme d'exercice.</p>
+            </div>
+          </div>
+
+          <h3>Surmonter les obstacles courants</h3>
+
+          <h4>"Je n'ai pas le temps"</h4>
+          <p>10 minutes valent mieux que rien. Fragmentez : 3 x 10 minutes = 30 minutes d'activité. Intégrez le mouvement dans vos activités quotidiennes.</p>
+
+          <h4>"Je suis trop fatigué"</h4>
+          <p>Paradoxalement, l'activité physique combat la fatigue et augmente l'énergie. Commencez doucement.</p>
+
+          <h4>"C'est trop cher"</h4>
+          <p>Marche, course, exercices au poids du corps, vidéos YouTube : de nombreuses options gratuites existent.</p>
+
+          <h4>"Il fait trop froid/chaud"</h4>
+          <p>Adaptez l'horaire (matin/soir), habillez-vous en conséquence, ou choisissez des activités en intérieur.</p>
+
+          <div class="article-callout">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+            <div>
+              <strong>Le saviez-vous ?</strong>
+              <p>Même de courtes périodes d'activité comptent. Chaque mouvement contribue à votre santé globale. L'important est la régularité, pas la perfection.</p>
+            </div>
+          </div>
+
+          <div class="article-cta">
+            <a href="index.html#rdv" class="btn primary">Prendre rendez-vous</a>
+            <a href="#top" class="btn outline">Retour aux articles</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article Complet 5 -->
+      <article id="gestion-stress" class="full-article">
+        <div class="article-header">
+          <div class="article-category">Santé Mentale</div>
+          <h2>Gérer le stress au quotidien : techniques et conseils pratiques</h2>
+          <div class="article-meta">
+            <span>Par Dr Pondja</span>
+            <span>•</span>
+            <span>5 octobre 2025</span>
+            <span>•</span>
+            <span>6 min de lecture</span>
+          </div>
+        </div>
+        
+        <div class="article-image">
+          <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1200&h=600&fit=crop" alt="Gestion du stress" loading="lazy">
+        </div>
+
+        <div class="article-content">
+          <p class="lead">Le stress fait partie intégrante de la vie moderne, mais lorsqu'il devient chronique, il peut gravement affecter notre santé physique et mentale. Heureusement, des techniques simples et efficaces existent pour mieux le gérer.</p>
+
+          <h3>Comprendre le stress</h3>
+          <p>Le stress est une réaction naturelle de l'organisme face à une situation perçue comme menaçante. À court terme, il peut être bénéfique et nous aider à performer. Mais le stress chronique a des effets délétères :</p>
+          <ul>
+            <li>Troubles du sommeil</li>
+            <li>Fatigue chronique</li>
+            <li>Anxiété et dépression</li>
+            <li>Problèmes digestifs</li>
+            <li>Affaiblissement du système immunitaire</li>
+            <li>Hypertension artérielle</li>
+            <li>Risque accru de maladies cardiovasculaires</li>
+          </ul>
+
+          <h3>Techniques de gestion du stress</h3>
+
+          <h4>1. La respiration profonde</h4>
+          <p>La cohérence cardiaque est une technique simple et puissante :</p>
+          <ul>
+            <li>Inspirez profondément par le nez pendant 5 secondes</li>
+            <li>Expirez lentement par la bouche pendant 5 secondes</li>
+            <li>Répétez pendant 5 minutes, 3 fois par jour</li>
+          </ul>
+          <p>Cette pratique régule le système nerveux et réduit immédiatement le niveau de stress.</p>
+
+          <h4>2. La méditation et la pleine conscience</h4>
+          <p>Même 10 minutes par jour peuvent faire une différence significative :</p>
+          <ul>
+            <li>Trouvez un endroit calme</li>
+            <li>Asseyez-vous confortablement</li>
+            <li>Concentrez-vous sur votre respiration</li>
+            <li>Observez vos pensées sans jugement</li>
+            <li>Ramenez doucement votre attention si elle s'égare</li>
+          </ul>
+          <p>Applications utiles : Petit Bambou, Headspace, Calm</p>
+
+          <h4>3. L'activité physique</h4>
+          <p>L'exercice est un puissant anti-stress naturel :</p>
+          <ul>
+            <li>Libère des endorphines (hormones du bien-être)</li>
+            <li>Réduit le cortisol (hormone du stress)</li>
+            <li>Améliore le sommeil</li>
+            <li>Augmente la confiance en soi</li>
+          </ul>
+          <p>30 minutes de marche rapide peuvent suffire à réduire significativement le stress.</p>
+
+          <h4>4. La gestion du temps</h4>
+          <p>Une mauvaise organisation amplifie le stress :</p>
+          <ul>
+            <li>Établissez des priorités (méthode Eisenhower)</li>
+            <li>Apprenez à dire non</li>
+            <li>Divisez les grandes tâches en étapes plus petites</li>
+            <li>Planifiez des pauses régulières</li>
+            <li>Évitez la procrastination</li>
+          </ul>
+
+          <h4>5. La connexion sociale</h4>
+          <p>Le soutien social est un tampon puissant contre le stress :</p>
+          <ul>
+            <li>Parlez de vos préoccupations à des proches</li>
+            <li>Maintenez des relations sociales régulières</li>
+            <li>Rejoignez des groupes partageant vos intérêts</li>
+            <li>N'hésitez pas à demander de l'aide</li>
+          </ul>
+
+          <h4>6. Le sommeil de qualité</h4>
+          <p>Le manque de sommeil aggrave le stress et vice versa :</p>
+          <ul>
+            <li>Couchez-vous et levez-vous à heures fixes</li>
+            <li>Créez une routine relaxante avant le coucher</li>
+            <li>Évitez les écrans 1h avant de dormir</li>
+            <li>Limitez la caféine après 16h</li>
+          </ul>
+
+          <h4>7. L'alimentation équilibrée</h4>
+          <p>Certains aliments aident à combattre le stress :</p>
+          <ul>
+            <li>Aliments riches en magnésium (noix, légumes verts, chocolat noir)</li>
+            <li>Oméga-3 (poissons gras, graines de lin)</li>
+            <li>Aliments riches en vitamine B (céréales complètes, légumineuses)</li>
+            <li>Probiotiques (yaourt, kéfir)</li>
+          </ul>
+          <p>Évitez : excès de caféine, alcool, sucres raffinés.</p>
+
+          <h3>Techniques rapides anti-stress</h3>
+          <p>Pour les moments de stress aigu :</p>
+
+          <h4>Technique 5-4-3-2-1</h4>
+          <p>Identifiez :</p>
+          <ul>
+            <li>5 choses que vous voyez</li>
+            <li>4 choses que vous touchez</li>
+            <li>3 choses que vous entendez</li>
+            <li>2 choses que vous sentez</li>
+            <li>1 chose que vous goûtez</li>
+          </ul>
+          <p>Cette technique ramène votre attention au moment présent et calme l'anxiété.</p>
+
+          <h4>La relaxation musculaire progressive</h4>
+          <ul>
+            <li>Contractez chaque groupe musculaire pendant 5 secondes</li>
+            <li>Relâchez complètement pendant 10 secondes</li>
+            <li>Progressez des pieds à la tête</li>
+          </ul>
+
+          <h4>La visualisation positive</h4>
+          <ul>
+            <li>Fermez les yeux</li>
+            <li>Imaginez un lieu calme et sûr</li>
+            <li>Engagez tous vos sens dans cette visualisation</li>
+            <li>Restez-y quelques minutes</li>
+          </ul>
+
+          <h3>Habitudes quotidiennes anti-stress</h3>
+          <ul>
+            <li>Commencez la journée par 5 minutes de méditation ou d'étirements</li>
+            <li>Prenez des micro-pauses toutes les heures</li>
+            <li>Sortez à l'extérieur au moins 15 minutes par jour</li>
+            <li>Limitez l'exposition aux actualités stressantes</li>
+            <li>Pratiquez la gratitude (notez 3 choses positives chaque soir)</li>
+            <li>Établissez une routine de "déconnexion" en soirée</li>
+          </ul>
+
+          <div class="article-callout">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+            <div>
+              <strong>Astuce :</strong>
+              <p>Tenez un journal du stress : notez les situations stressantes, vos réactions et ce qui vous aide. Cela permet d'identifier vos déclencheurs et vos stratégies efficaces.</p>
+            </div>
+          </div>
+
+          <div class="article-callout warning">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+            <div>
+              <strong>Quand consulter ?</strong>
+              <p>Si le stress devient ingérable malgré ces techniques, s'accompagne de symptômes physiques persistants, ou affecte significativement votre vie quotidienne, consultez un professionnel de santé. Un soutien psychologique peut être très bénéfique.</p>
+            </div>
+          </div>
+
+          <div class="article-cta">
+            <a href="index.html#rdv" class="btn primary">Prendre rendez-vous</a>
+            <a href="#top" class="btn outline">Retour aux articles</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article Complet 6 -->
+      <article id="depistage" class="full-article">
+        <div class="article-header">
+          <div class="article-category">Prévention</div>
+          <h2>Les dépistages recommandés selon votre âge</h2>
+          <div class="article-meta">
+            <span>Par Dr Pondja</span>
+            <span>•</span>
+            <span>25 septembre 2025</span>
+            <span>•</span>
+            <span>5 min de lecture</span>
+          </div>
+        </div>
+        
+        <div class="article-image">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=600&fit=crop" alt="Dépistage précoce" loading="lazy">
+        </div>
+
+        <div class="article-content">
+          <p class="lead">Le dépistage précoce de certaines maladies peut sauver des vies. Détectées tôt, de nombreuses pathologies se traitent beaucoup mieux. Voici un guide des dépistages recommandés selon votre âge.</p>
+
+          <h3>Dépistages pour tous les adultes</h3>
+
+          <h4>Tension artérielle</h4>
+          <ul>
+            <li><strong>Qui :</strong> Tous les adultes</li>
+            <li><strong>Fréquence :</strong> Au moins tous les 2 ans si normale</li>
+            <li><strong>Pourquoi :</strong> Prévention des maladies cardiovasculaires et de l'AVC</li>
+          </ul>
+
+          <h4>Cholestérol</h4>
+          <ul>
+            <li><strong>Qui :</strong> Hommes dès 40 ans, femmes dès 50 ans (ou plus tôt si facteurs de risque)</li>
+            <li><strong>Fréquence :</strong> Tous les 5 ans si normal</li>
+            <li><strong>Pourquoi :</strong> Prévention des maladies cardiovasculaires</li>
+          </ul>
+
+          <h4>Diabète (glycémie)</h4>
+          <ul>
+            <li><strong>Qui :</strong> Tous les adultes dès 45 ans, ou plus tôt si surpoids ou antécédents familiaux</li>
+            <li><strong>Fréquence :</strong> Tous les 3 ans si normale</li>
+            <li><strong>Pourquoi :</strong> Détection précoce du diabète de type 2</li>
+          </ul>
+
+          <h3>Dépistages spécifiques aux femmes</h3>
+
+          <h4>Cancer du col de l'utérus (frottis)</h4>
+          <ul>
+            <li><strong>Qui :</strong> Femmes de 25 à 65 ans</li>
+            <li><strong>Fréquence :</strong> 
+              <ul>
+                <li>25-29 ans : tous les 3 ans (test cytologique)</li>
+                <li>30-65 ans : tous les 5 ans (test HPV ou co-testing)</li>
+              </ul>
+            </li>
+            <li><strong>Pourquoi :</strong> Détection des lésions précancéreuses</li>
+          </ul>
+
+          <h4>Cancer du sein (mammographie)</h4>
+          <ul>
+            <li><strong>Qui :</strong> Femmes de 50 à 74 ans (ou dès 40 ans si antécédents familiaux)</li>
+            <li><strong>Fréquence :</strong> Tous les 2 ans</li>
+            <li><strong>Pourquoi :</strong> Détection précoce du cancer du sein</li>
+            <li><strong>Remarque :</strong> Auto-examen mensuel recommandé pour toutes les femmes</li>
+          </ul>
+
+          <h4>Densité osseuse (ostéoporose)</h4>
+          <ul>
+            <li><strong>Qui :</strong> Femmes dès 65 ans (ou plus tôt si facteurs de risque)</li>
+            <li><strong>Fréquence :</strong> À discuter avec votre médecin</li>
+            <li><strong>Pourquoi :</strong> Prévention de l'ostéoporose et des fractures</li>
+          </ul>
+
+          <h3>Dépistages spécifiques aux hommes</h3>
+
+          <h4>Cancer de la prostate (PSA)</h4>
+          <ul>
+            <li><strong>Qui :</strong> Hommes de 50 à 75 ans (ou dès 45 ans si antécédents familiaux ou afro-descendants)</li>
+            <li><strong>Fréquence :</strong> À discuter avec votre médecin (bénéfices/risques à évaluer)</li>
+            <li><strong>Pourquoi :</strong> Détection du cancer de la prostate</li>
+          </ul>
+
+          <h3>Dépistages pour tous après 50 ans</h3>
+
+          <h4>Cancer colorectal</h4>
+          <ul>
+            <li><strong>Qui :</strong> Hommes et femmes de 50 à 74 ans</li>
+            <li><strong>Méthode :</strong> 
+              <ul>
+                <li>Test immunologique fécal (FIT) tous les 2 ans</li>
+                <li>Ou coloscopie tous les 10 ans</li>
+              </ul>
+            </li>
+            <li><strong>Pourquoi :</strong> Détection précoce du cancer colorectal (95% de survie à 5 ans si détecté tôt)</li>
+          </ul>
+
+          <h4>Examen de la vue</h4>
+          <ul>
+            <li><strong>Qui :</strong> Tous dès 50 ans</li>
+            <li><strong>Fréquence :</strong> Tous les 2 ans</li>
+            <li><strong>Pourquoi :</strong> Dépistage du glaucome, DMLA, cataracte</li>
+          </ul>
+
+          <h4>Examen auditif</h4>
+          <ul>
+            <li><strong>Qui :</strong> Tous dès 50 ans</li>
+            <li><strong>Fréquence :</strong> Tous les 2-3 ans</li>
+            <li><strong>Pourquoi :</strong> Détection précoce de la perte auditive</li>
+          </ul>
+
+          <h3>Dépistages après 65 ans</h3>
+
+          <h4>Anévrisme de l'aorte abdominale</h4>
+          <ul>
+            <li><strong>Qui :</strong> Hommes fumeurs ou anciens fumeurs de 65-75 ans</li>
+            <li><strong>Fréquence :</strong> Une fois (échographie)</li>
+            <li><strong>Pourquoi :</strong> Prévention de la rupture d'anévrisme</li>
+          </ul>
+
+          <h4>Evaluation gériatrique</h4>
+          <ul>
+            <li><strong>Qui :</strong> Tous dès 75 ans</li>
+            <li><strong>Contenu :</strong> Évaluation de l'autonomie, de la mémoire, du risque de chute</li>
+            <li><strong>Fréquence :</strong> Annuelle</li>
+          </ul>
+
+          <h3>Dépistages selon les facteurs de risque</h3>
+
+          <h4>Antécédents familiaux de cancer</h4>
+          <p>Débuter les dépistages plus tôt et/ou plus fréquemment. Consultez un conseiller en génétique si nécessaire.</p>
+
+          <h4>Tabagisme</h4>
+          <ul>
+            <li>Scanner thoracique pour cancer du poumon (fumeurs actuels ou récents de 50-80 ans)</li>
+            <li>Surveillance accrue cardiovasculaire</li>
+          </ul>
+
+          <h4>Surpoids/Obésité</h4>
+          <ul>
+            <li>Dépistage diabète plus fréquent</li>
+            <li>Surveillance cardiovasculaire renforcée</li>
+            <li>Dépistage apnée du sommeil</li>
+          </ul>
+
+          <div class="article-callout">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+            <div>
+              <strong>Important :</strong>
+              <p>Ce guide est indicatif. Chaque personne est unique. Discutez avec votre médecin de votre situation personnelle, de vos facteurs de risque et des dépistages adaptés à votre profil.</p>
+            </div>
+          </div>
+
+          <h3>En Belgique : le dossier médical global (DMG)</h3>
+          <p>Le DMG permet un suivi médical coordonné et personnalisé :</p>
+          <ul>
+            <li>Centralisation de vos informations médicales</li>
+            <li>Rappels automatiques pour les dépistages</li>
+            <li>Remboursement de consultation majoré</li>
+            <li>Meilleur suivi de votre santé</li>
+          </ul>
+
+          <h3>Conseils pratiques</h3>
+          <ul>
+            <li>Notez vos rendez-vous de dépistage dans votre agenda</li>
+            <li>Gardez un carnet de santé à jour</li>
+            <li>N'attendez pas les symptômes pour consulter</li>
+            <li>Informez votre médecin de vos antécédents familiaux</li>
+            <li>Profitez de la consultation annuelle pour faire le point</li>
+          </ul>
+
+          <div class="article-callout warning">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+            <div>
+              <strong>N'oubliez pas :</strong>
+              <p>Le meilleur moment pour un dépistage, c'est avant l'apparition des symptômes. La prévention est votre meilleur allié santé.</p>
+            </div>
+          </div>
+
+          <div class="article-cta">
+            <a href="index.html#rdv" class="btn primary">Prendre rendez-vous</a>
+            <a href="#top" class="btn outline">Retour aux articles</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
     </div>
 </section>
 
@@ -933,11 +1251,9 @@ footer {
         <div class="footer-col">
           <h4>Informations</h4>
           <ul>
-            <li><a href="https://drpondja-horaires.be" target="_blank" rel="noopener">Horaires</a></li>
-            <li><a href="https://drpondja-temoignages.be" target="_blank" rel="noopener">Témoignages</a></li>
-            <li><a href="https://drpondja-faq.be" target="_blank" rel="noopener">FAQ</a></li>
-            <li><a href="mentions.html">Mentions légales</a></li>
-            <li><a href="privacy.html">Confidentialité</a></li>
+            <li><a href="index.html#rdv">Rendez-vous</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
           </ul>
         </div>
 
@@ -954,7 +1270,7 @@ footer {
               <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
               </svg>
-              <a href="mailto:contact@drpondja.be">contact@drpondja.be</a>
+              <a href="/cdn-cgi/l/email-protection#2a4945445e4b495e6a4e585a45444e404b04484f"><span class="__cf_email__" data-cfemail="d0b3bfbea4b1b3a490b4a2a0bfbeb4bab1feb2b5">[email&#160;protected]</span></a>
             </li>
           </ul>
         </div>
@@ -962,18 +1278,6 @@ footer {
 
       <div class="footer-bottom">
         <p>© 2025 Dr Pondja – Tous droits réservés</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-            </svg>
-          </a>
-          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-            </svg>
-          </a>
-        </div>
       </div>
     </div>
 </footer>
@@ -1020,7 +1324,7 @@ window.addEventListener('scroll', () => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const href = this.getAttribute('href');
-    if (href !== '#') {
+    if (href !== '#' && href !== '#top') {
       e.preventDefault();
       const target = document.querySelector(href);
       if (target) {
@@ -1030,9 +1334,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         window.scrollTo({
           top: offsetPosition,
           behavior: 'smooth'
+
         });
       }
     }
   });
 });
 </script>
+
