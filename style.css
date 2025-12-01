@@ -138,6 +138,7 @@ header.scrolled {
 }
 
 .main-nav a.nav-cta {
+  white-space: nowrap;
   background: var(--primary);
   color: white;
   font-weight: 600;

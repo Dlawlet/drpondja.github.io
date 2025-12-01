@@ -228,6 +228,7 @@ button {
 }
 
 .nav-cta {
+  white-space: nowrap;
   background-color: var(--primary);
   color: var(--white) !important;
   padding: var(--spacing-xs) var(--spacing-md) !important;
@@ -290,6 +291,7 @@ button {
   }
 
   .nav-cta {
+    white-space: nowrap;
     margin-top: var(--spacing-sm);
     text-align: center;
   }
