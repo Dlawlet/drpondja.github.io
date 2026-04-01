@@ -424,6 +424,11 @@ section {
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
+section:not(.hero) {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
+}
+
 section.fade-in {
   opacity: 1;
   transform: translateY(0);

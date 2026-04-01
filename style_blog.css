@@ -139,6 +139,17 @@ button {
   cursor: pointer;
 }
 
+.brand:focus,
+.brand:focus-visible,
+.brand:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.brand {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
