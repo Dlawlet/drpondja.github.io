@@ -1,49 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
+
   <!-- Page d'accueil -->
   <url>
     <loc>https://drpondja.be/</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://drpondja.be/assets/share-image.png</image:loc>
-      <image:title>Dr Pondja - Médecin Généraliste Bruxelles</image:title>
+      <image:title>Dr Yonkeu Pondja - Médecin Généraliste Molenbeek &amp; Anderlecht, Bruxelles</image:title>
     </image:image>
   </url>
-  
-  <!-- Section Services -->
-  <url>
-    <loc>https://drpondja.be/#services</loc>
-    <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Section Cabinets -->
-  <url>
-    <loc>https://drpondja.be/#cabinets</loc>
-    <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Section À propos -->
-  <url>
-    <loc>https://drpondja.be/#apropos</loc>
-    <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Blog  -->
+
+  <!-- Blog index -->
   <url>
     <loc>https://drpondja.be/blog.html</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Articles existants -->
+  <url>
+    <loc>https://drpondja.be/blog/vaccination-grippe.html</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
+  <url>
+    <loc>https://drpondja.be/blog/sommeil-qualite.html</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/alimentation-hiver.html</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/activite-physique.html</loc>
+    <lastmod>2025-10-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/gestion-stress.html</loc>
+    <lastmod>2025-10-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/depistage-age.html</loc>
+    <lastmod>2025-09-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Nouveaux articles – Tier 1 (Local SEO) -->
+  <url>
+    <loc>https://drpondja.be/blog/medecin-generaliste-molenbeek.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/medecin-generaliste-anderlecht.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/medecin-traitant-belgique.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/medecin-de-garde-bruxelles.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/certificat-medical-belgique.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Nouveaux articles – Tier 2 (Conditions démographiques) -->
+  <url>
+    <loc>https://drpondja.be/blog/diabete-type2-bruxelles.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/hypertension-arterielle-bruxelles.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/vaccination-enfants-belgique.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/sante-voyage-vaccins.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/obesite-surpoids-enfant.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Nouveaux articles – Tier 3 (Services & Saisonnier) -->
+  <url>
+    <loc>https://drpondja.be/blog/contraception-consultation-bruxelles.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/suivi-grossesse-bruxelles.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/sante-mentale-stress-urbain.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/bilan-sante-annuel-belgique.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/grippe-vs-covid-belgique.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/maladies-cardiovasculaires-prevention.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/maladies-thyroide-symptomes.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/menopause-traitement-bruxelles.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/douleurs-dos-lombalgies.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://drpondja.be/blog/sante-seniors-bruxelles.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

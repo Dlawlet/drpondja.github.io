@@ -12,13 +12,11 @@ Disallow: /*.tmp$
 
 # Bloquer les fichiers de développement
 Disallow: /README.md
-Disallow: /TODO.txt
-Disallow: /*.txt$
 
 # Autoriser spécifiquement le blog et les pages importantes
 Allow: /blog.html
+Allow: /blog/
 Allow: /index.html
 Allow: /assets/
 
-# Sitemap (créez-le plus tard)
-#Sitemap: https://drpondja.be/sitemap.xml
+Sitemap: https://drpondja.be/sitemap.xml
